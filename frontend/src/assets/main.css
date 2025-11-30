@@ -27,6 +27,10 @@
     display: none;        /* Полное скрытие */
 }
 
+.katex-display>.katex {
+    white-space: unset !important;
+}
+
 /* Для Firefox */
 html {
     scrollbar-width: none; /* Скрываем скроллбар */
