@@ -118,6 +118,7 @@ export default {
     font-weight: 500;
     padding: 20px;
     padding-bottom: 0;
+    text-transform: uppercase;
 }
 .sources_list {
     display:flex;
