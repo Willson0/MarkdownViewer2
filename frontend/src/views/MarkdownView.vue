@@ -55,8 +55,8 @@ export default {
                 linkify: true,
                 breaks: true
             })
-            this.html = md.render(response.data.content || '');
-            this.model = response.data.model || '';
+            this.html = md.render(response.data.text || '');
+            this.model = response.data?.sources?.[0] || '';
 
             this.$nextTick(() => {
                 requestAnimationFrame(() => {
