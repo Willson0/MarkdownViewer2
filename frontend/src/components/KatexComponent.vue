@@ -1,7 +1,7 @@
 <template>
     <div class="inline-katex" ref="root">
         <template v-for="(part, idx) in parts" :key="idx">
-            <span v-if="part.type === 'text'">{{ part.content }}</span>
+            <span v-if="part.type === 'text'" v-html="part.content"></span>
 
             <!-- data-tex и data-display позволяют при copy получить исходный LaTeX -->
             <span
