@@ -50,22 +50,8 @@ export default {
         await axios.post(config.backend + "md/" + this.$route.query.hash, {
             initData: window.Telegram.WebApp.initData,
         }).then((response) => {
-            const md = new MarkdownIt({
-                html: true,
-                linkify: true,
-                breaks: true
-            })
-            this.html = md.render(response.data.text || '');
+            this.html = response.data.text || '';
             this.model = response.data?.sources?.[0] || '';
-
-            this.$nextTick(() => {
-                requestAnimationFrame(() => {
-                    this.events();
-
-                    endLoading("loading");
-                    window.Telegram.WebApp.MainButton.show();
-                })
-            })
         })
     },
     methods: {
