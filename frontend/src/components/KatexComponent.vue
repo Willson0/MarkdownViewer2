@@ -120,18 +120,17 @@ export default {
                 } else return p;
             });
 
-            const md = new MarkdownIt({
-                html: true,
-                linkify: true,
-                breaks: true
-            })
-
             for (let part of this.parts) {
                 if (part.type === "text") this.fullText += "<span>" + part.content + "</span>"
                 else this.fullText += `<span data-tex="${part.content}" data-display="${part.display ? '1' : '0'}" class="${part.display ? 'display-math' : ''}">${part.html}</span>`;
             }
 
-            this.html = this.fullText;
+            const md = new MarkdownIt({
+                html: true,
+                linkify: true,
+                breaks: true
+            })
+            this.html = md.render(this.fullText);
 
             this.$nextTick(() => {
                 requestAnimationFrame(() => {
