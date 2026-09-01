@@ -46,7 +46,7 @@
 ## Скриншот
 
 <p align="center">
-  <img width="85%" height="780" alt="image" src="https://github.com/user-attachments/assets/99882351-3c65-4034-a270-fd0f34e9a30a" />
+  <img width="85%" alt="image" src="https://github.com/user-attachments/assets/99882351-3c65-4034-a270-fd0f34e9a30a" />
 </p>
 
 ---
